@@ -5,10 +5,12 @@ console.warn(
 );
 
 export * as _Builtin from "./_Builtin";
+export * from "./ConfigurationGroup";
 export * from "./devlink";
 export * from "./devlinkContext";
 export * from "./DevLinkProvider";
 export * from "./interactions";
+export * from "./SelectBox";
 export * from "./Test";
 export * from "./utils";
 export * from "./values/Builtin/formatNumber";

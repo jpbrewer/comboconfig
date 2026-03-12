@@ -1,0 +1,141 @@
+{
+    "index": 1,
+    "job_id": 1773340176786,
+    "assembly_template": "G",
+    "assembly_no": 30,
+    "icon": "arrangement_30_icon.png",
+    "solution_grid": {
+        "pos2": {
+            "row": "Bottom",
+            "quantity": 1,
+            "line_notes": "",
+            "order_dims": "60\" x 80\"",
+            "building_block": "Cased Opening"
+        },
+        "pos5": {
+            "row": "Top",
+            "quantity": 1,
+            "line_notes": "",
+            "order_dims": "60\" x 12-1/2\"",
+            "building_block": "Transom"
+        },
+        "pos13": {
+            "row": "Bottom",
+            "quantity": 2,
+            "line_notes": "",
+            "order_dims": "21-3/4\" x 80\"",
+            "building_block": "Sidelite"
+        },
+        "pos46": {
+            "row": "Top",
+            "quantity": 2,
+            "line_notes": "",
+            "order_dims": "21-3/4\" x 12-1/2\"",
+            "building_block": "Flanker"
+        },
+        "unit_notes": "INTERIOR Unit Width: 108\"; Unit Height: 95-3/4\"; Jamb Depth: 4-9/16\"",
+        "solution_notes": "Side Gap: 1/8\"; Top Gap: 1/8\" ; Bottom Height: 81-3/4\""
+    },
+    "build_objects": [
+        {
+            "cols": 2,
+            "rows": 2,
+            "width": 60,
+            "height": 80,
+            "sr_top": 4.5,
+            "sr_left": 4.5,
+            "sr_right": 4.5,
+            "block_pos": "pos2",
+            "sr_bottom": 9.25,
+            "construction": "cased_opening"
+        },
+        {
+            "cols": 3,
+            "rows": 1,
+            "width": 60,
+            "height": 12.5,
+            "sr_top": 1.75,
+            "sr_left": 1.75,
+            "sr_right": 1.75,
+            "block_pos": "pos5",
+            "sr_bottom": 1.75,
+            "construction": "transom"
+        },
+        {
+            "cols": 2,
+            "rows": 2,
+            "width": 21.75,
+            "height": 80,
+            "sr_top": 1.75,
+            "sr_left": 1.75,
+            "sr_right": 1.75,
+            "block_pos": "pos1",
+            "sr_bottom": 1.75,
+            "construction": "sidelite"
+        },
+        {
+            "cols": 2,
+            "rows": 1,
+            "width": 21.75,
+            "height": 12.5,
+            "sr_top": 1.75,
+            "sr_left": 1.75,
+            "sr_right": 1.75,
+            "block_pos": "pos4",
+            "sr_bottom": 1.75,
+            "construction": "flanker"
+        },
+        {
+            "cols": 2,
+            "rows": 2,
+            "width": 21.75,
+            "height": 80,
+            "sr_top": 1.75,
+            "sr_left": 1.75,
+            "sr_right": 1.75,
+            "block_pos": "pos3",
+            "sr_bottom": 1.75,
+            "construction": "sidelite"
+        },
+        {
+            "cols": 2,
+            "rows": 1,
+            "width": 21.75,
+            "height": 12.5,
+            "sr_top": 1.75,
+            "sr_left": 1.75,
+            "sr_right": 1.75,
+            "block_pos": "pos6",
+            "sr_bottom": 1.75,
+            "construction": "flanker"
+        }
+    ],
+    "solution_svg": null,
+    "meta": {},
+    "opening_width": 108.25,
+    "opening_height": 95.875,
+    "jamb_depth": 4.5625,
+    "unit_width": 108,
+    "unit_height": 95.75,
+    "location": "interior",
+    "door_bore": null,
+    "hardware_color": null,
+    "building_block_svgs_no_muntins": {
+        "pos1": "Claude: SVG text would be here.",
+        "pos2": "Claude: SVG text would be here.",
+        "pos3": "Claude: SVG text would be here.",
+        "pos4": "Claude: SVG text would be here.",
+        "pos5": "Claude: SVG text would be here.",
+        "pos6": "Claude: SVG text would be here."
+    },
+    "assembly_svg_no_muntins": "Claude: SVG text would be here."
+    "building_block_svgs": {
+        "pos1": "Claude: SVG text would be here.",
+        "pos2": "Claude: SVG text would be here.",
+        "pos3": "Claude: SVG text would be here.",
+        "pos4": "Claude: SVG text would be here.",
+        "pos5": "Claude: SVG text would be here.",
+        "pos6": "Claude: SVG text would be here."
+    },
+    "assembly_svg": "Claude: SVG text would be here."
+}

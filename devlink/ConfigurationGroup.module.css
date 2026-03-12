@@ -1,0 +1,27 @@
+@media screen and (max-width: 991px) {
+  .div-block-31 {
+    width: 100%;
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    background-color: hsla(0, 0.00%, 97.33%, 1.00);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .text-block-10 {
+    padding-top: 9px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #w-node-c4f05fb7-2984-b605-f2a4-093836d61fc9-36d61fc9 {
+  }
+}
