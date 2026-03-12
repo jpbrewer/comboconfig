@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import "../../devlink/globals.css";
+import "./global.css";
+import "../../devlink/global.css";
 import { DevLinkProvider } from "../../devlink";
 
 
