@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
-import { SelectBox } from "./SelectBox";
 import * as _utils from "./utils";
 import _styles from "./ConfigurationGroup.module.css";
 
@@ -9,6 +8,7 @@ export function ConfigurationGroup({
   as: _Component = _Builtin.Block,
   groupName = "Claude put label for group name here.",
   selectBoxLabel = "Claude put label for SelectBox here.",
+  groupInsertionSlot,
 }) {
   return (
     <_Component
@@ -26,7 +26,7 @@ export function ConfigurationGroup({
         {groupName}
       </_Builtin.Block>
       <_Builtin.Block tag="div" data-insertion-point="configuration_group">
-        <SelectBox label={selectBoxLabel} />
+        {groupInsertionSlot}
       </_Builtin.Block>
     </_Component>
   );

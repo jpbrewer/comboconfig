@@ -57,7 +57,7 @@ export function PositionSelector({
         tag="div"
       >
         <_Builtin.Link
-          className={_utils.cx(_styles, "inactive-pos")}
+          className={_utils.cx(_styles, "active-pos")}
           id={_utils.cx(
             _styles,
             "w-node-df6c8f67-0f16-d18d-aea7-0b7df254e9e7-f254e9e3"
@@ -87,7 +87,7 @@ export function PositionSelector({
           {"5"}
         </_Builtin.Link>
         <_Builtin.Link
-          className={_utils.cx(_styles, "inactive-pos")}
+          className={_utils.cx(_styles, "selected-pos")}
           id={_utils.cx(
             _styles,
             "w-node-df6c8f67-0f16-d18d-aea7-0b7df254e9eb-f254e9e3"

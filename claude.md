@@ -202,7 +202,7 @@ webflow devlink sync
 - **No external state libraries** — useState/useReducer only
 - **Styling** — Claude may create and edit CSS Modules for page layout and structural styling (e.g. grid zones, positioning). All React component visual design and styling is handled in Webflow and exported via DevLink — Claude must not restyle DevLink components
 - **Preserve unknown JSON fields** — when outputting the final configured JSON, spread unknown fields through; never drop data Claude didn't explicitly handle
-- **Measurements are in inches** as decimal numbers (e.g. `4.5625` = 4-9/16")
+- **Measurements are in inches** as decimal numbers (e.g. `4.5625` = 4-9/16"). When building any UI that displays or inputs measurements, always use the measurement utilities defined in `skills/measurement-utils.md` (implemented in `src/lib/measurementUtils.ts`). These provide decimal↔fraction conversion, select box option generation, and bounded range clamping. Never hardcode precision or range — always ask the human first.
 - **Positions are strings** — always reference as `"pos1"` through `"pos6"`, never as integers
 - Component files go in `src/components/`, `src/app/`, or `src/lib/` — never in `/devlink`
 

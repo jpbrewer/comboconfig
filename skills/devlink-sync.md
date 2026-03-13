@@ -134,6 +134,33 @@ DevLink Sync Summary
 
 ---
 
+## Variant Props
+
+Webflow component variants export as a `variant` prop on the DevLink component. Claude wires this prop to React state — Webflow owns the styles, Claude owns the logic.
+
+### Naming Convention for Variants
+- ✅ Must be: `PascalCase`, no spaces or dashes (e.g. `Active`, `Inactive`, `Selected`, `Expanded`)
+- ❌ Flags: `kebab-case`, `snake_case`, spaces, or mixed case (e.g. `active-state`, `green state`, `ACTIVE`)
+- Variant names become prop values in the exported component — bad names produce messy TypeScript
+
+### When a variant prop is detected in a new or modified component:
+1. Note the component name and the possible variant values
+2. Infer the TypeScript union type, e.g.:
+   ```ts
+   variant: "Active" | "Inactive"
+   ```
+3. Ask the human which state conditions should drive each variant value before wiring logic
+4. Wire it cleanly in `/app` or `/lib`, e.g.:
+   ```tsx
+   <BlockSelectorButton variant={isSelected ? "Active" : "Inactive"} />
+   ```
+
+### Variant naming violations:
+- Flag using the same format as class/ID violations in Step 2
+- Stop and wait for the human to rename in Webflow and re-sync before proceeding
+
+---
+
 ## Hard Rules (Never Violate)
 
 - ⛔ Never edit, create, or delete any file in `/devlink`

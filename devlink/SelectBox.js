@@ -7,6 +7,7 @@ import _styles from "./SelectBox.module.css";
 export function SelectBox({
   as: _Component = _Builtin.Block,
   label = "Claude put label for SelectBox here.",
+  selectInsertionSlot,
 }) {
   return (
     <_Component className={_utils.cx(_styles, "select-overall-box")} tag="div">
@@ -20,7 +21,9 @@ export function SelectBox({
         className={_utils.cx(_styles, "single-select-wrapper")}
         tag="div"
         data-insertion-point="single_select"
-      />
+      >
+        {selectInsertionSlot}
+      </_Builtin.Block>
     </_Component>
   );
 }

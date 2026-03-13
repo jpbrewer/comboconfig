@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
-import { PositionSelector } from "./PositionSelector";
-import { ConfigurationGroup } from "./ConfigurationGroup";
-import { SubmitButton } from "./SubmitButton";
 import * as _utils from "./utils";
 import _styles from "./TabGroup.module.css";
 
@@ -16,6 +13,9 @@ export function TabGroup({
   positionSelectorText1 = "Choose Position:",
   configurationGroupSelectBoxLabel = "Claude put label for SelectBox here.",
   configurationGroupGroupName = "Claude put label for ConfigurationGroup here.",
+  tabSlot1,
+  tabSlot2,
+  tabSlot3,
 }) {
   return (
     <_Component
@@ -37,22 +37,26 @@ export function TabGroup({
         </_Builtin.TabsLink>
       </_Builtin.TabsMenu>
       <_Builtin.TabsContent tag="div">
-        <_Builtin.TabsPane tag="div" data-w-tab="Tab 1">
-          <_Builtin.Heading
-            className={_utils.cx(_styles, "header-tabs")}
-            tag="h3"
-          >
-            {title}
-          </_Builtin.Heading>
-          <PositionSelector text1={positionSelectorText1} />
-          <ConfigurationGroup
-            groupName={configurationGroupGroupName}
-            selectBoxLabel={configurationGroupSelectBoxLabel}
-          />
-          <SubmitButton />
+        <_Builtin.TabsPane
+          className={_utils.cx(_styles, "tab-pane-tab-1")}
+          tag="div"
+          data-w-tab="Tab 1"
+        >
+          {tabSlot1 ?? (
+            <_Builtin.Heading
+              className={_utils.cx(_styles, "header-tabs")}
+              tag="h3"
+            >
+              {title}
+            </_Builtin.Heading>
+          )}
         </_Builtin.TabsPane>
-        <_Builtin.TabsPane tag="div" data-w-tab="Tab 2" />
-        <_Builtin.TabsPane tag="div" data-w-tab="Tab 3" />
+        <_Builtin.TabsPane tag="div" data-w-tab="Tab 2">
+          {tabSlot2}
+        </_Builtin.TabsPane>
+        <_Builtin.TabsPane tag="div" data-w-tab="Tab 3">
+          {tabSlot3}
+        </_Builtin.TabsPane>
       </_Builtin.TabsContent>
     </_Component>
   );

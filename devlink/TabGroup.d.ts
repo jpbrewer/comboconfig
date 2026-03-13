@@ -10,4 +10,7 @@ declare function TabGroup(props: {
   positionSelectorText1?: React.ReactNode;
   configurationGroupSelectBoxLabel?: React.ReactNode;
   configurationGroupGroupName?: React.ReactNode;
+  tabSlot1?: Types.Devlink.Slot;
+  tabSlot2?: Types.Devlink.Slot;
+  tabSlot3?: Types.Devlink.Slot;
 }): React.JSX.Element;

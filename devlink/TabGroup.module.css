@@ -1,7 +1,16 @@
+.overall-tabs {
+  width: 100%;
+}
+
 @media screen and (max-width: 991px) {
   .overall-tabs {
     width: 100%;
   }
+}
+
+.tab-pane-tab-1 {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .header-tabs {

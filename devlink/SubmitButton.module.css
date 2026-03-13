@@ -1,5 +1,33 @@
+.submit-base {
+  display: block;
+  width: 130px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  border-radius: 5px;
+}
+
+.submit-base:where(.w-variant-f0f56c11-e4c0-44b2-57eb-b765c4d35ea0) {
+  background-color: hsla(208.00000000000003, 0.00%, 66.67%, 1.00);
+}
+
 @media screen and (max-width: 991px) {
-  .submit-inactive {
+  .submit-base {
+    display: block;
+    width: 130px;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 991px) {
+  .submit-active {
     display: block;
     width: 130px;
     margin-top: 15px;
@@ -7,7 +35,5 @@
     margin-left: auto;
 
     border-radius: 5px;
-
-    background-color: hsla(208.00000000000003, 0.00%, 76.67%, 1.00);
   }
 }
