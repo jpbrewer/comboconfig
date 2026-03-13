@@ -35,6 +35,7 @@ src/
 devlink/           # ⛔ READ-ONLY. Auto-synced from Webflow. Never modify.
 data/              # Static JSON files (product catalog, option definitions, etc.) (create as needed)
 public/            # Static assets
+skills/            # Claude skills
 ```
 
 ---
@@ -187,7 +188,11 @@ npm run build
 
 # Type check
 npx tsc --noEmit
+
+# Devlink Sync
+webflow devlink sync
 ```
+
 
 ---
 
@@ -218,3 +223,5 @@ The configured output will be sent to BigCommerce via a **custom API/webhook**. 
 - SVG fields (`assembly_svg`, `building_block_svgs`, etc.) It should largely be treated as a black box by you, and will probably be handled by the SVG pipeline. .
 - The `solution_grid` object uses different position keys (e.g. `pos13`, `pos46`) that encode the same building block being used in multiple positions in multiple quantities — this is **display/summary data only**, not the source of truth for building block configuration. The JSON array is the source of truth. The solution-grid is a viewport into that truth that includes summary information and not intended to be machine readable. 
 - Always ask before adding new dependencies or packages.
+- Always review the skills folder to learn new skills. 
+- In particular, always apply the WebFlow Devlink Sync skill when DevLink sync is performed. 
