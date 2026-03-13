@@ -1,0 +1,9 @@
+@media screen and (max-width: 991px) {
+  .overall-tabs {
+    width: 100%;
+  }
+}
+
+.header-tabs {
+  text-align: center;
+}

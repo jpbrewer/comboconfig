@@ -8,7 +8,19 @@ This skill activates when either:
 ---
 
 ## Purpose
-After a Webflow DevLink sync, Claude must audit the changes, verify naming conventions, identify what is new or modified, and update the codebase accordingly — but only after naming conventions have been confirmed clean.
+Run the Webflow DevLink sync command, then audit the changes, verify naming conventions, identify what is new or modified, and update the codebase accordingly — but only after naming conventions have been confirmed clean.
+
+---
+
+## Step 0 — Run the Sync Command
+
+Run the following bash command to pull the latest DevLink components from Webflow:
+
+```bash
+webflow devlink sync
+```
+
+Wait for this to complete before proceeding. If it fails, report the error and stop.
 
 ---
 
@@ -36,11 +48,14 @@ Inspect every changed or new file in `/devlink` and check the following:
 ### IDs
 - ✅ Must be: `lowercase_with_underscores`
 - ❌ Flags: `camelCase`, `PascalCase`, `lowercase-with-dashes`, mixed
+- ⏭️ **Skip** Webflow auto-generated IDs (e.g. `w-node-*` hashes) — these are non-semantic and cannot be controlled in Webflow. Only flag IDs that were explicitly set by the developer.
 
 ### `data-*` Attributes
 - ✅ Attribute name must be: `data-lowercase-with-dashes` (e.g. `data-block-pos`)
 - ✅ Attribute value must be: `lowercase_with_underscores` (e.g. `data-block-pos="pos_1"`)
 - ❌ Flags: dashes in values, camelCase in attribute names, uppercase anywhere
+- ⏭️ **Exception:** `data-pos-selector` values should match the JSON data model exactly (e.g. `pos1`, `pos2`) — do not require underscores
+- ⏭️ **Skip** `data-w-tab` attributes — these are Webflow's internal tab system and cannot be controlled
 
 ### When a violation is found:
 1. **Stop immediately** — do not proceed to Step 3 (of the main list)

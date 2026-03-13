@@ -9,12 +9,15 @@ export function SelectBox({
   label = "Claude put label for SelectBox here.",
 }) {
   return (
-    <_Component className={_utils.cx(_styles, "div-block-32")} tag="div">
-      <_Builtin.Block className={_utils.cx(_styles, "text-block-11")} tag="div">
+    <_Component className={_utils.cx(_styles, "select-overall-box")} tag="div">
+      <_Builtin.Block
+        className={_utils.cx(_styles, "select-text-label")}
+        tag="div"
+      >
         {label}
       </_Builtin.Block>
       <_Builtin.Block
-        className={_utils.cx(_styles, "div-block-33")}
+        className={_utils.cx(_styles, "single-select-wrapper")}
         tag="div"
         data-insertion-point="single_select"
       />

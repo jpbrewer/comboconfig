@@ -19,7 +19,10 @@ export function ConfigurationGroup({
       )}
       tag="div"
     >
-      <_Builtin.Block className={_utils.cx(_styles, "text-block-10")} tag="div">
+      <_Builtin.Block
+        className={_utils.cx(_styles, "group-name-label")}
+        tag="div"
+      >
         {groupName}
       </_Builtin.Block>
       <_Builtin.Block tag="div" data-insertion-point="configuration_group">
