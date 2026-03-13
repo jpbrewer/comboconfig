@@ -10,6 +10,7 @@ export * from "./devlink";
 export * from "./devlinkContext";
 export * from "./DevLinkProvider";
 export * from "./interactions";
+export * from "./MeasurementSelectBox";
 export * from "./PositionSelector";
 export * from "./SelectBox";
 export * from "./SubmitButton";

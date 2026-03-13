@@ -8,6 +8,46 @@
   }
 }
 
+.tab-link-tab-1 {
+  width: 33%;
+  border: 1px solid #333;
+  color: #797878;
+  text-align: center;
+}
+
+.tab-link-tab-1:global(.w--current) {
+  color: black;
+  font-weight: 700;
+}
+
+.tab-link-tab-2 {
+  width: 33%;
+  border: 1px solid black;
+  color: hsla(0, 0.22%, 47.23%, 1.00);
+  text-align: center;
+}
+
+.tab-link-tab-2:global(.w--current) {
+  color: hsla(0, 0.00%, 0.00%, 1.00);
+  font-weight: 700;
+}
+
+.tab-link-tab-3 {
+  width: 33%;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(0, 0.00%, 20.00%, 1.00);
+
+  color: #797878;
+  text-align: center;
+}
+
+.tab-link-tab-3:global(.w--current) {
+  color: black;
+  font-weight: 700;
+}
+
 .tab-pane-tab-1 {
   padding-right: 15px;
   padding-left: 15px;

@@ -26,13 +26,25 @@ export function TabGroup({
       fadeOut={100}
     >
       <_Builtin.TabsMenu tag="div">
-        <_Builtin.TabsLink data-w-tab="Tab 1" block="inline">
+        <_Builtin.TabsLink
+          className={_utils.cx(_styles, "tab-link-tab-1")}
+          data-w-tab="Tab 1"
+          block="inline"
+        >
           <_Builtin.Block tag="div">{"Block Config"}</_Builtin.Block>
         </_Builtin.TabsLink>
-        <_Builtin.TabsLink data-w-tab="Tab 2" block="inline">
+        <_Builtin.TabsLink
+          className={_utils.cx(_styles, "tab-link-tab-2")}
+          data-w-tab="Tab 2"
+          block="inline"
+        >
           <_Builtin.Block tag="div">{"Unit Config"}</_Builtin.Block>
         </_Builtin.TabsLink>
-        <_Builtin.TabsLink data-w-tab="Tab 3" block="inline">
+        <_Builtin.TabsLink
+          className={_utils.cx(_styles, "tab-link-tab-3")}
+          data-w-tab="Tab 3"
+          block="inline"
+        >
           <_Builtin.Block tag="div">{"Output"}</_Builtin.Block>
         </_Builtin.TabsLink>
       </_Builtin.TabsMenu>

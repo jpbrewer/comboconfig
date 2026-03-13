@@ -50,6 +50,18 @@ export function configuratorReducer(
         if (state.stagedChanges.cols !== undefined) {
           block.cols = state.stagedChanges.cols;
         }
+        if (state.stagedChanges.sr_top !== undefined) {
+          block.sr_top = state.stagedChanges.sr_top;
+        }
+        if (state.stagedChanges.sr_bottom !== undefined) {
+          block.sr_bottom = state.stagedChanges.sr_bottom;
+        }
+        if (state.stagedChanges.sr_left !== undefined) {
+          block.sr_left = state.stagedChanges.sr_left;
+        }
+        if (state.stagedChanges.sr_right !== undefined) {
+          block.sr_right = state.stagedChanges.sr_right;
+        }
       }
 
       return {

@@ -1,0 +1,10 @@
+import * as React from "react";
+import * as Types from "./types";
+
+declare function MeasurementSelectBox(props: {
+  as?: React.ElementType;
+  label?: React.ReactNode;
+  selectInsertionSlot?: Types.Devlink.Slot;
+  selectInsertionFrac?: Types.Devlink.Slot;
+  selectInsertionInch?: Types.Devlink.Slot;
+}): React.JSX.Element;

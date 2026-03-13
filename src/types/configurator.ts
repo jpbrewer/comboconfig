@@ -31,7 +31,13 @@ export interface ComboSolution {
 export interface StagedChanges {
   rows?: number;
   cols?: number;
+  sr_top?: number;
+  sr_bottom?: number;
+  sr_left?: number;
+  sr_right?: number;
 }
+
+export type StagedField = "rows" | "cols" | "sr_top" | "sr_bottom" | "sr_left" | "sr_right";
 
 export interface ConfiguratorState {
   selectedPosition: BlockPosition | null;
@@ -41,5 +47,5 @@ export interface ConfiguratorState {
 
 export type ConfiguratorAction =
   | { type: "SELECT_POSITION"; position: BlockPosition }
-  | { type: "STAGE_CHANGE"; field: "rows" | "cols"; value: number }
+  | { type: "STAGE_CHANGE"; field: StagedField; value: number }
   | { type: "SUBMIT_CHANGES" };
