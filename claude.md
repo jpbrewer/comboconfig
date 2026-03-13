@@ -55,6 +55,25 @@ When a component needs a new prop or structural change, Claude should say:
 > "To do this, we need to add a `[propName]` prop to the `[ComponentName]` component in Webflow. Once that's synced via DevLink, I can wire it up here." --or--
 > "I need you to create a new component that you might call `[ComponentName]` with a prop `[propName]` and here are other details you need to know..."
 
+### Wrapper Pattern for DevLink Interactivity
+
+DevLink components cannot have `onClick`, `onChange`, or `className` override props added through Webflow. When a DevLink component needs interactive behavior, create a **Wrapper component** in `src/components/` that:
+
+1. **Renders the DevLink component** inside a wrapper `<div>` with a `ref`
+2. **Handles clicks via event delegation** — attach `onClick` to the wrapper div and use `event.target.closest('[data-attribute]')` to identify which element was clicked. Call `e.preventDefault()` to stop `href="#"` navigation on Link-based buttons.
+3. **Toggles CSS classes via DOM refs** — import the DevLink component's CSS module (e.g. `import posStyles from '../../devlink/PositionSelector.module.css'`) to get the hashed class names, then use `useEffect` + `ref.querySelectorAll` to swap classes based on state.
+4. **Uses variant props when available** — if the component has a Webflow variant (e.g. `variant="Active" | "Inactive"`), pass it as a prop directly instead of DOM manipulation.
+
+Existing examples: `PositionSelectorWrapper.tsx`, `SubmitButtonWrapper.tsx`
+
+### Slot Props
+
+Webflow exports slots as **named props** on DevLink components (e.g. `tabSlot1`, `groupInsertionSlot`, `selectInsertionSlot`). Pass JSX content to these props to inject React elements into the DevLink component's structure. This is the primary mechanism for composing DevLink layout shells with dynamic content.
+
+### Webflow Breakpoint Reminder
+
+Styles in Webflow must be set at the **base (desktop) breakpoint** to apply at all screen sizes. Styles set only at the tablet breakpoint (`max-width: 991px`) will not appear on desktop. If DevLink components render unstyled, check whether the Webflow styles were applied at the correct breakpoint.
+
 ---
 
 ## Data Model

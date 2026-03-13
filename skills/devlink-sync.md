@@ -134,6 +134,26 @@ DevLink Sync Summary
 
 ---
 
+## Slot Props
+
+Webflow components can export **slots** — named props that accept React children. Slots are how Claude injects dynamic content into DevLink component structures.
+
+### How to identify slots after sync:
+- Look for props typed as `Types.Devlink.Slot` in the `.d.ts` file
+- In the `.js` file, slots render as `{slotPropName}` inside a container div (often with a `data-insertion-point` attribute)
+- Common patterns: `tabSlot1`, `groupInsertionSlot`, `selectInsertionSlot`
+
+### When a slot prop is detected:
+1. Note the component name and slot prop name
+2. Identify what kind of content should be injected (other DevLink components, HTML elements, etc.)
+3. If the slot replaces a previously hardcoded child component (e.g. a SelectBox that was embedded inside ConfigurationGroup), note the migration
+
+### Slot naming convention:
+- ✅ Must be: `camelCase` ending in `Slot` (e.g. `tabSlot1`, `groupInsertionSlot`)
+- ❌ Flags: `PascalCase`, `snake_case`, or names that don't end in `Slot`
+
+---
+
 ## Variant Props
 
 Webflow component variants export as a `variant` prop on the DevLink component. Claude wires this prop to React state — Webflow owns the styles, Claude owns the logic.
